@@ -6,6 +6,4 @@ import org.springframework.stereotype.Repository;
 import com.examen.springExamen.model.entity.Usuarios;
 
 @Repository
-public interface UsuarioRepositorio extends JpaRepository<Usuarios, Long> {
-    
-} 
+public interface UsuarioRepositorio extends JpaRepository<Usuarios, Long> {} 

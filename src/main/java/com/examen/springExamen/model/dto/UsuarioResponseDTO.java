@@ -19,6 +19,9 @@ public class UsuarioResponseDTO {
     public UsuarioResponseDTO(Usuarios u){
         this.nombre = u.getNombre();
         this.nacimiento = u.getNacimiento();
+        this.apellidoPaterno = u.getApellidoPaterno();
+        this.apellidoMaterno = u.getApellidoMaterno();
+        this.nombreUsuario = u.getNombreUsuario();
 
         if(u.getNacimiento() != null){
             this.edad = Period.between(u.getNacimiento(), LocalDate.now()).getYears(); // Calcula la edad

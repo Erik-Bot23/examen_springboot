@@ -49,7 +49,7 @@ public class SecurityConfig {
         return http.csrf(csrf -> csrf.disable())
                     .cors(Customizer.withDefaults())
                     .authorizeHttpRequests(auth -> auth.requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
-                                                    .requestMatchers("/api/usuarios/auth/**").permitAll()
+                                                    .requestMatchers(HttpMethod.GET, "/api/usuarios/**").permitAll()
                                                     .anyRequest().authenticated()).build();
     }
 }

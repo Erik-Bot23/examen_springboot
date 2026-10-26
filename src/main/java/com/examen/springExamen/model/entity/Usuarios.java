@@ -23,7 +23,6 @@ public class Usuarios {
     private String apellidoMaterno;
     private String nombreUsuario;
     private String contrasena;
-    private LocalDate nacimiento;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id")
@@ -81,15 +80,6 @@ public class Usuarios {
 
     public void setContrasena(String contrasena){
         this.contrasena=contrasena;
-    }
-
-    //Getter y setter de nacimiento
-    public LocalDate getNacimiento(){
-        return nacimiento;
-    }
-
-    public void setNacimiento(LocalDate nacimiento){
-        this.nacimiento=nacimiento;
     }
 
     //Getter y setter de domicilio
